@@ -4,9 +4,6 @@ import com.shpp.p2p.cs.iburlaka.assignment14.helpsClasses.Food;
 import com.shpp.p2p.cs.iburlaka.assignment14.helpsClasses.Fruits;
 import com.shpp.p2p.cs.iburlaka.assignment14.helpsClasses.Vegetables;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-
 /**
  * Class with tests for the custom ArrayList
  * Tests ArrayList of Strings, Integers, Objects
@@ -30,10 +27,10 @@ public class TestsForArrayList {
         System.out.println(cities + " - array list after adding and setting elements");
         TestMethods.testSize(cities, 13);
         TestMethods.testElementByIndex(cities, 1, "Lviv");
-        TestMethods.testElementByIndex(cities, 1, "Lutsk");
+        TestMethods.testElementByIndex(cities, 1, "Lutsk"); //expected result is fail
 
         cities.removeElement(0);
-        System.out.println(cities + " - array list after removing element");
+        System.out.println(cities + " - array list after removing first element");
         TestMethods.testIsEmpty(cities, false); // list is not empty
         cities.cleanList();
         TestMethods.testIsEmpty(cities, true); // now list is empty
@@ -42,6 +39,8 @@ public class TestsForArrayList {
             cities.add("Vinnytsia");
             cities.add("Ternopil");
         }
+
+        // testing for-each loop
         for (String oneCty : cities) {
             System.out.println(oneCty + " - is added city");
         }

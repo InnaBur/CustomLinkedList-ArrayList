@@ -10,9 +10,11 @@ import java.util.Iterator;
  */
 public class MyArrayList<T> implements Iterable<T> {
 
-    // starts array size
+    // the initial size of the array
     final static int ARRAY_SIZE = 10;
     private Object[] array = new Object[ARRAY_SIZE];
+
+    // current pointer`s position in the array
     private int index = 0;
 
     /**
@@ -210,7 +212,7 @@ public class MyArrayList<T> implements Iterable<T> {
     @Override
     public Iterator<T> iterator() {
 
-        return new Iterator<T>() {
+        return new Iterator<>() {
 
             // the pointer on the current element in the list
             int pointer = 0;

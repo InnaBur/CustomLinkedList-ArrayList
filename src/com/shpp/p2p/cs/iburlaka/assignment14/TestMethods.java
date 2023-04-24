@@ -124,10 +124,10 @@ public class TestMethods {
     static <T> void testGetElement(MyLinkedList<T> linkedList, int index, T expectedResult) {
         if (linkedList.getElement(index).equals(expectedResult)) {
             System.out.println("Pass! Element is " + linkedList.getElement(index) +
-                    ", expected result  is " + expectedResult + " - Test 'FirstElement'");
+                    ", expected result  is " + expectedResult + " - Test 'GetElement'");
         } else {
             System.out.println("Fail! Element is " + linkedList.getElement(index) +
-                    ",  expected result is  " + expectedResult + " - Test 'FirstElement'");
+                    ",  expected result is  " + expectedResult + " - Test 'GetElement'");
         }
     }
 

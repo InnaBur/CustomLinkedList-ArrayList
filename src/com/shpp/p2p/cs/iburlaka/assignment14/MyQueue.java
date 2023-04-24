@@ -3,7 +3,7 @@ package com.shpp.p2p.cs.iburlaka.assignment14;
 import java.util.Iterator;
 
 /**
- * interface for custom Queue, based on a linked list
+ * interface for custom Queue, which based on a linked list
  */
 public interface MyQueue<T> {
 

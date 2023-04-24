@@ -4,7 +4,7 @@ import com.shpp.p2p.cs.iburlaka.assignment14.MyArrayList;
 
 /** Class uses for testing custom ArrayList
  * It is simple calculator (with plus, minus, multiply, power and divided operations)
- * (partly taken from the solution of the task for week 10)
+ * (taken from the solution of the task for week 10)
  * inputted formula in the form of custom ArrayList as an argument for methods
  */
 public class Calculator {

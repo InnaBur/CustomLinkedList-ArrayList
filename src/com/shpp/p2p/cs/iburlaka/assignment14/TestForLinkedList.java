@@ -2,13 +2,9 @@ package com.shpp.p2p.cs.iburlaka.assignment14;
 
 import com.shpp.p2p.cs.iburlaka.assignment14.helpsClasses.*;
 
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
-
 /**
- * Class with tests for the custom LinkedList
- * Tests LinkedList of Strings, Integers, Objects
+ * Class with tests for the custom LinkedList and custom Queue and Stack
+ * Tests LinkedList of Integers, Objects, also Stack and Queue of Strings
  */
 public class TestForLinkedList {
 
@@ -41,6 +37,8 @@ public class TestForLinkedList {
         TestMethods.testIsEmpty(testList, true);
 
         System.out.println(testList.size());
+
+        // testing of printing empty list
         testList.printList();
 
         System.out.println("------------------MyLinkedList<Object>--------------------");
@@ -99,9 +97,9 @@ public class TestForLinkedList {
         System.out.println(stack.size());
         stack.printList();
         for (String s : stack) {
-            System.out.println(stack.peek());
+            System.out.println("Stack peek is " + stack.peek());
             stack.pop();
-            System.out.println(stack.size());
+            System.out.println("Stack size after removing peek " + stack.size());
         }
 
         System.out.println("-----------------MyQueue<Object>---------------------");
@@ -119,7 +117,7 @@ public class TestForLinkedList {
 
         schedule.printList();
 
-        System.out.println(schedule.size());
+        System.out.println("Queue size is " + schedule.size());
 
         System.out.println("Peek in the Queue is " + schedule.getPeek());
         System.out.println("Removed element is " + schedule.getRemoved());
@@ -127,6 +125,5 @@ public class TestForLinkedList {
         System.out.println("Removed element is " + schedule.getRemoved());
         System.out.println("Remaining items: ");
         schedule.printList();
-
     }
 }

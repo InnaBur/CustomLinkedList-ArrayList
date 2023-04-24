@@ -381,7 +381,7 @@ public class MyLinkedList<T> implements Iterable<T>, MyQueue<T>, MyStack<T> {
      */
     @Override
     public Iterator<T> iterator() {
-        return new Iterator<T>() {
+        return new Iterator<>() {
             MyObject temp = first;
 
             @Override

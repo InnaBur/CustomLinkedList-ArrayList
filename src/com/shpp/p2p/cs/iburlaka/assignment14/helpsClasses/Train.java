@@ -4,7 +4,6 @@ package com.shpp.p2p.cs.iburlaka.assignment14.helpsClasses;
  * Class uses for testing custom LinkedList
  */
 public class Train {
-
     private final int number;
     private final String direction;
     private final String time;
