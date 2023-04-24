@@ -6,10 +6,20 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
+/**
+ * Class with tests for the custom LinkedList
+ * Tests LinkedList of Strings, Integers, Objects
+ */
 public class TestForLinkedList {
 
     public static void main(String[] args) {
 
+        System.out.println("------------------MyLinkedList<Integer>--------------------");
+        /* Tests for LinkedList of Integers. Integers are added into MyArrayList through a loop
+         * Methods of adding the first element and last element are tested
+         * Also used class TestMethods for testing methods size(), printList(), getElement(), containsElement(),
+         * isEmpty().
+         */
         MyLinkedList<Integer> testList = new MyLinkedList<>();
         testList.printList();
         for (int i = 0; i < 7; i++) {
@@ -27,14 +37,19 @@ public class TestForLinkedList {
         TestMethods.testContainsElement(testList, 50, false);
         TestMethods.testContainsElement(testList, 77, true);
         TestMethods.testTheSameLastAndFirstValue(testList, true);
-//        testList.cleanList();
+        testList.cleanList();
         TestMethods.testIsEmpty(testList, true);
 
         System.out.println(testList.size());
         testList.printList();
 
-        System.out.println("--------------------------------------");
+        System.out.println("------------------MyLinkedList<Object>--------------------");
 
+        /* Tests for LinkedList of Objects.
+         * Methods of adding the first element and last element are tested
+         * Also used class TestMethods for testing methods size(), printList(), getElement(), containsElement(),
+         * removeElement().
+         */
         Fruits apple = new Fruits("apple", 100, 10);
         Fruits banana = new Fruits("banana", 50, 40);
         Fruits kiwi = new Fruits("kiwi", 50, 55);
@@ -62,13 +77,19 @@ public class TestForLinkedList {
         TestMethods.testFirstElement(foods, carrot);
 
 
-        System.out.println("--------------------------------------");
+        System.out.println("-----------------MyStack<String>---------------------");
+
+        /* Tests for Stack of Strings. Firstly elements are added into MyLinkedList, then added into Stack
+         * (with testing method getElement() for LinkedList)
+         * Methods peek(), push() and pop() are tested
+         */
         MyLinkedList<String> cities = new MyLinkedList<>();
         cities.addElement("Kyiv");
         cities.addElement("Paris");
         cities.addElement("Graz");
         cities.addElement("Prague");
         cities.addElement("Warshaw");
+
         MyStack<String> stack = new MyLinkedList<>();
         stack.push(cities.getElement(2));
         stack.push(cities.getElement(0));
@@ -83,25 +104,11 @@ public class TestForLinkedList {
             System.out.println(stack.size());
         }
 
+        System.out.println("-----------------MyQueue<Object>---------------------");
 
-        Queue<Integer> a = new LinkedList<>();
-        a.add(12);
-        a.add(13);
-        a.add(14);
-        System.out.println(a.poll());
-        System.out.println("Peek");
-        System.out.println(a.peek());
-        System.out.println(" rem " + a.remove());
-        System.out.println(a.poll());
-
-
-        Stack<Integer> st = new Stack<>();
-        st.push(1);
-        st.push(2);
-        st.push(3);
-        System.out.println(st);
-
-
+        /* Tests for Queue of Strings. Elements are added into Queue with addElement() method
+         * Methods getPeek(), getRemoved(), size() are tested
+         */
         MyQueue<Train> schedule = new MyLinkedList<>();
 
         schedule.addElement(new Train(100, "Kyiv", "10.00"));
@@ -113,8 +120,6 @@ public class TestForLinkedList {
         schedule.printList();
 
         System.out.println(schedule.size());
-        System.out.println("Last element in cities is " + cities.getLast());
-        System.out.println(testList.getLast());
 
         System.out.println("Peek in the Queue is " + schedule.getPeek());
         System.out.println("Removed element is " + schedule.getRemoved());
@@ -122,13 +127,6 @@ public class TestForLinkedList {
         System.out.println("Removed element is " + schedule.getRemoved());
         System.out.println("Remaining items: ");
         schedule.printList();
-
-        testList.cleanList();
-        if ( testList.containsElement(12)) {
-            System.out.println("yes");
-        } else {
-            System.out.println("no");
-        }
 
     }
 }

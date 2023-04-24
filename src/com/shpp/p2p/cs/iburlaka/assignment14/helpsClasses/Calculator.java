@@ -2,15 +2,18 @@ package com.shpp.p2p.cs.iburlaka.assignment14.helpsClasses;
 
 import com.shpp.p2p.cs.iburlaka.assignment14.MyArrayList;
 
+/** Class uses for testing custom ArrayList
+ * It is simple calculator (with plus, minus, multiply, power and divided operations)
+ * (partly taken from the solution of the task for week 10)
+ * inputted formula in the form of custom ArrayList as an argument for methods
+ */
 public class Calculator {
     public static double calculate(MyArrayList<String> formulaList) {
         try {
             while (formulaList.size() != 1) {
                 power(formulaList);
                 multiplyAndDivide(formulaList);
-                // System.out.println("mult" + formulaList);
                 plusAndMinus(formulaList);
-                // System.out.println("plus" + formulaList);
             }
             Double.parseDouble(formulaList.getElement(0));
         } catch (NumberFormatException n) {
